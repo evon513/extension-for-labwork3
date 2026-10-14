@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 782.6935 2155.9070000000006" width="782.6935" height="2155.9070000000006" style="--bg:#1F1F1F;--fg:#CCCCCC;--line:#CCCCCC;--accent:#0078D4;--muted:#CCCCCCCC;--surface:#181818;--border:#CCCCCC;background:var(--bg)">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<g class="subgraph" data-id="Parsing_Logic" data-label="Parsing Logic">
+  <rect x="219.40150000000006" y="596.776" width="523.2919999999999" height="679.086" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="219.40150000000006" y="596.776" width="523.2919999999999" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="231.40150000000006" y="610.776" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">Parsing Logic</text>
+</g>
+<g class="subgraph" data-id="Code_Generation" data-label="Code Generation">
+  <rect x="304.80174999999997" y="1420.7620000000002" width="343.229" height="434.44500000000005" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="304.80174999999997" y="1420.7620000000002" width="343.229" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="316.80174999999997" y="1434.7620000000002" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">Code Generation</text>
+</g>
+<polyline class="edge" data-from="Start" data-to="CheckEditor" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="326.21575,76.9 326.21575,124.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CheckEditor" data-to="ShowWarning" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Нет" points="292.25308333333334,294.7133333333333 292.25308333333334,425.57599999999996 175.089,425.57599999999996 175.089,505.876" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CheckEditor" data-to="GetText" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Да" points="360.1784166666667,294.7133333333333 360.1784166666667,340.676 477.3425,340.676 477.3425,420.976" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="GetText" data-to="ParseFunc" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="477.3425,457.876 477.3425,505.876" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="EditBuffer" data-to="Notify" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="477.34250000000003,1946.1070000000004 477.34250000000003,1994.1070000000004" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Notify" data-to="End" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="477.34250000000003,2031.0070000000005 477.3425,2079.0070000000005" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="ParseFunc" data-to="ScanLoop" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="477.3425,542.776 477.34250000000003,640.776" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="FillStruct" data-to="BuildFunc" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="477.34250000000003,1259.862 477.3425,1329.862" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="BuildFunc" data-to="CompCheck" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="477.34250000000003,1366.7620000000002 477.3425,1464.7620000000002" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="GenString" data-to="EditBuffer" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="477.3425,1839.2070000000003 477.34250000000003,1909.2070000000003" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="ScanLoop" data-to="CheckBrackets" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="477.34250000000003,677.6759999999999 477.34250000000003,725.6759999999999" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CheckBrackets" data-to="AppendToS" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Да" points="512.5401666666667,901.6643333333333 512.5401666666667,948.862 607.1655000000001,948.862 607.1655000000001,1053.162" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CheckBrackets" data-to="CheckParen" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Нет" points="442.1448333333334,901.6643333333332 442.1448333333334,948.862 347.51950000000005,948.862 347.51950000000005,1053.162" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="AppendToS" data-to="SplitArgs" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="607.1655000000001,1090.0620000000001 607.1655000000001,1114.062 477.34250000000003,1114.062 477.34250000000003,1138.062" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CheckParen" data-to="SplitArgs" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="347.51950000000005,1090.0620000000001 347.51950000000005,1114.062 477.34250000000003,1114.062 477.34250000000003,1138.062" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="SplitArgs" data-to="FillStruct" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="477.34250000000003,1174.962 477.34250000000003,1222.962" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CompCheck" data-to="Decr" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Да" points="500.06666666666666,1578.3828333333336 500.06666666666666,1613.1070000000002 562.14975,1613.1070000000002 562.14975,1717.4070000000002" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CompCheck" data-to="Incr" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Нет" points="454.61833333333334,1578.3828333333336 454.61833333333334,1613.1070000000002 392.53524999999996,1613.1070000000002 392.53524999999996,1717.4070000000002" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Decr" data-to="GenString" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="562.1497499999999,1754.3070000000002 562.1497499999999,1778.3070000000002 477.3425,1778.3070000000002 477.3425,1802.3070000000002" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Incr" data-to="GenString" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="392.53524999999996,1754.3070000000002 392.53524999999996,1778.3070000000002 477.3425,1778.3070000000002 477.3425,1802.3070000000002" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<g class="edge-label" data-from="CheckEditor" data-to="ShowWarning" data-label="Нет">
+  <rect x="157.089" y="432.57599999999996" width="35.47" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="174.824" y="447.72599999999994" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Нет</text>
+</g>
+<g class="edge-label" data-from="CheckEditor" data-to="GetText" data-label="Да">
+  <rect x="462.3425" y="347.676" width="29.53" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="477.10749999999996" y="362.82599999999996" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Да</text>
+</g>
+<g class="edge-label" data-from="CheckBrackets" data-to="AppendToS" data-label="Да">
+  <rect x="592.1655000000001" y="979.862" width="29.53" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="606.9305" y="995.012" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Да</text>
+</g>
+<g class="edge-label" data-from="CheckBrackets" data-to="CheckParen" data-label="Нет">
+  <rect x="329.51950000000005" y="979.862" width="35.47" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="347.25450000000006" y="995.012" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Нет</text>
+</g>
+<g class="edge-label" data-from="CompCheck" data-to="Decr" data-label="Да">
+  <rect x="547.1497499999999" y="1644.107" width="29.53" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="561.9147499999999" y="1659.257" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Да</text>
+</g>
+<g class="edge-label" data-from="CompCheck" data-to="Incr" data-label="Нет">
+  <rect x="374.53524999999996" y="1644.107" width="35.47" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="392.27025" y="1659.257" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Нет</text>
+</g>
+<g class="node" data-id="Start" data-label="Пользователь выделил текст и нажал Ctrl+Alt+F" data-shape="stadium">
+  <rect x="158.89325000000002" y="40" width="334.645" height="36.900000000000006" rx="18.450000000000003" ry="18.450000000000003" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="326.21575" y="58.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Пользователь выделил текст и нажал Ctrl+Alt+F</text>
+</g>
+<g class="node" data-id="CheckEditor" data-label="Активен ли редактор?" data-shape="diamond">
+  <polygon points="326.21575,124.90000000000002 428.10375,226.788 326.21575,328.676 224.32775000000004,226.788" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="326.21575" y="226.788" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Активен ли редактор?</text>
+</g>
+<g class="node" data-id="ShowWarning" data-label="Показать предупреждение в VS Code" data-shape="rectangle">
+  <rect x="40" y="505.876" width="270.178" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="175.089" y="524.326" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Показать предупреждение в VS Code</text>
+</g>
+<g class="node" data-id="GetText" data-label="Считать выделенный фрагмент текста" data-shape="rectangle">
+  <rect x="338.178" y="420.976" width="278.329" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="477.3425" y="439.426" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Считать выделенный фрагмент текста</text>
+</g>
+<g class="node" data-id="ParseFunc" data-label="Функция Parsing(txt)" data-shape="rectangle">
+  <rect x="395.235" y="505.876" width="164.21499999999997" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="477.3425" y="524.326" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Функция Parsing(txt)</text>
+</g>
+<g class="node" data-id="BuildFunc" data-label="Функция BuildFor(params)" data-shape="rectangle">
+  <rect x="377.451" y="1329.862" width="199.783" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="477.34250000000003" y="1348.3120000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Функция BuildFor(params)</text>
+</g>
+<g class="node" data-id="EditBuffer" data-label="Замена выделенного фрагмента в editor.edit" data-shape="rectangle">
+  <rect x="322.98750000000007" y="1909.2070000000003" width="308.7099999999999" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="477.34250000000003" y="1927.6570000000004" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Замена выделенного фрагмента в editor.edit</text>
+</g>
+<g class="node" data-id="Notify" data-label="Показ всплывающего уведомления 'done!'" data-shape="rectangle">
+  <rect x="330.02700000000004" y="1994.1070000000004" width="294.631" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="477.34250000000003" y="2012.5570000000005" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Показ всплывающего уведомления &#39;done!&#39;</text>
+</g>
+<g class="node" data-id="End" data-label="Завершение работы команды" data-shape="stadium">
+  <rect x="368.92949999999996" y="2079.0070000000005" width="216.826" height="36.900000000000006" rx="18.450000000000003" ry="18.450000000000003" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="477.3425" y="2097.4570000000003" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Завершение работы команды</text>
+</g>
+<g class="node" data-id="ScanLoop" data-label="Посимвольное сканирование строки" data-shape="rectangle">
+  <rect x="342.9945000000001" y="640.776" width="268.69599999999997" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="477.3425000000001" y="659.226" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Посимвольное сканирование строки</text>
+</g>
+<g class="node" data-id="CheckBrackets" data-label="Символ внутри скобок?" data-shape="diamond">
+  <polygon points="477.3425000000001,725.6759999999999 582.9355,831.2689999999999 477.3425000000001,936.8619999999999 371.7495000000001,831.2689999999999" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="477.3425000000001" y="831.2689999999999" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Символ внутри скобок?</text>
+</g>
+<g class="node" data-id="AppendToS" data-label="Накопление строки аргументов" data-shape="rectangle">
+  <rect x="487.63750000000005" y="1053.162" width="239.05599999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="607.1655000000001" y="1071.612" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Накопление строки аргументов</text>
+</g>
+<g class="node" data-id="CheckParen" data-label="Обновление флага состояния" data-shape="rectangle">
+  <rect x="235.40150000000006" y="1053.162" width="224.236" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="347.51950000000005" y="1071.612" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Обновление флага состояния</text>
+</g>
+<g class="node" data-id="SplitArgs" data-label="split(',') + trim()" data-shape="rectangle">
+  <rect x="416.35350000000005" y="1138.062" width="121.978" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="477.34250000000003" y="1156.512" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">split(&#39;,&#39;) + trim()</text>
+</g>
+<g class="node" data-id="FillStruct" data-label="FillStruct" data-shape="rectangle">
+  <rect x="429.6915" y="1222.962" width="95.30199999999999" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="477.34250000000003" y="1241.412" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">FillStruct</text>
+</g>
+<g class="node" data-id="name" data-label="name" data-shape="rectangle">
+  <rect x="241.92250000000004" y="640.776" width="73.072" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="278.4585000000001" y="659.226" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">name</text>
+</g>
+<g class="node" data-id="CompCheck" data-label="start &gt; end ?" data-shape="diamond">
+  <polygon points="477.3425,1464.7620000000002 545.515,1532.9345 477.3425,1601.107 409.16999999999996,1532.9345" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="477.3425" y="1532.9345" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">start &gt; end ?</text>
+</g>
+<g class="node" data-id="Decr" data-label="Знак: '&gt;', Шаг: '-='" data-shape="rectangle">
+  <rect x="492.26874999999995" y="1717.4070000000002" width="139.762" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="562.1497499999999" y="1735.8570000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Знак: &#39;&gt;&#39;, Шаг: &#39;-=&#39;</text>
+</g>
+<g class="node" data-id="Incr" data-label="Знак: '&lt;', Шаг: '+='" data-shape="rectangle">
+  <rect x="320.80174999999997" y="1717.4070000000002" width="143.467" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="392.53524999999996" y="1735.8570000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Знак: &#39;&lt;&#39;, Шаг: &#39;+=&#39;</text>
+</g>
+<g class="node" data-id="GenString" data-label="Сборка строки for int name=start..." data-shape="rectangle">
+  <rect x="355.5915" y="1802.3070000000002" width="243.50199999999995" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="477.3425" y="1820.7570000000003" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Сборка строки for int name=start...</text>
+</g>
+</svg>
